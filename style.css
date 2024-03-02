@@ -1,0 +1,447 @@
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat;
+
+}
+a{
+    text-decoration: none ;
+     /* to remove underline for links */
+}
+
+body {
+    background-color: #000;
+    z-index: -2;
+    color: white;
+}
+
+*::selection{
+    background-color: #ffff;
+    color: #95C11E;
+}
+
+.home-div{
+    background-image: url(https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?cs=srgb&dl=pexels-victor-freitas-841130.jpg&fm=jpg);
+    background-size: cover;
+}
+
+.header {
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000df;
+    z-index: 2;
+}
+
+
+nav li{
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-left: 35px;
+    font-size: 18px;
+}
+
+
+nav a {
+    color: rgb(255, 255, 255);
+}
+
+/* This is the link color for the navigation bar. */
+
+nav li a:hover {
+    color: #95C11E;;
+    transition: 0.5s;
+}
+
+/*   This is the hover color for the navigation bar links. */
+
+nav ul li a:active {
+    color: #95C11E;;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    /* Use flexbox for layout */
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 15px;
+    position: relative;
+}
+
+/*   This is the navigation bar list. */
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 26px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+.logo-c{
+    display: flex;
+    align-items: center;
+}
+.logo h4{
+    text-align: center;
+}
+#dumbbell-icon{
+    color: #95C11E;
+    font-size: 60px;
+    margin-top: 10px;
+}
+/* home page */
+.home{
+    height: 91vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+.home p{
+    font-size: 70px;
+    font-weight: 700;
+    position: relative;
+
+}
+.home p span{
+    color: #95C11E;
+    position: relative;
+}
+
+.bgt{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+.home-container p::before {
+    content:"# MAKE YOUR BODY SHAPE";
+    position: absolute;
+    -webkit-text-stroke:1px #ffffffa2 ;
+    z-index: -1;
+} 
+
+#scroller{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+    
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller1{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller h4{
+    font-family: sans-serif;
+
+    display: inline-block ;
+    font-size: 70px;
+    font-weight: 900;
+    margin-right: 10px;
+    color: transparent;
+    -webkit-text-stroke:0.9px #95C11E;;
+    z-index: 10;
+    transition: all linear 0.3s;
+}
+
+#scroller h4:hover{
+    color: #95C11E;
+}
+
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.about-main{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+.about-main img{
+    height: 80%;
+    width: 35%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.about-info{
+    width: 50%;
+}
+
+.about-info h4{
+    font-size: 60px;
+    font-weight: 800px;
+    margin-bottom: 10px;
+    color: #95C11E;
+
+}
+
+.about-info p{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.services{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+.cards{
+    height: 80%;
+    width: 23%;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    
+}
+
+#card1{
+    background-image: url(https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_441,c_limit/eed89cc3-bfb3-4499-a7de-4c3011b33a39/nike-training-club-app-home-workouts-more.jpg);
+}
+#card2{
+    background-image: url(https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_900,c_limit/8fa8424b-0688-4be4-999b-d7ad64956584/nike-training-club-app-home-workouts-more.jpg);
+}
+
+#card3{
+    background-image: url(https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_441,c_limit/28aca81b-2c57-4a08-ab33-59a755fe348f/nike-training-club-app-home-workouts-more.jpg);
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+
+    padding: 20px;
+    padding-top: 110px;
+    opacity: 0;
+    transition: all ease 0.4s;
+}
+
+.overlay h4{
+    color: black;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.overlay p{
+    color: black;
+    font-size: 20px;
+}
+
+.cards:hover .overlay{
+    opacity: 2;
+}
+.cards:hover{
+    transform:rotate3d(-0.5,0.5,0,20deg) ;
+    transition: all ease 0.6s;
+}
+
+.motivation{
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: radial-gradient(circle at center,#60cb03b4, #95C11E); 
+    
+}
+.motivation h4{
+    width: 50%;
+    align-content: center;
+    font-size: 23px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 700;
+}
+
+.motivation img{
+    height: 100%;
+    width: 10%;
+    object-fit: cover;
+}
+.trainers-info{
+    height:10vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.trainers{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.build{
+    height:60%;
+    width: 25%;
+    /* background-color: #95C11E; */
+    scale: 1;
+    color: #000;
+    transition: all ease 0.25s ;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden; 
+    /* makes the hover background adjust in border */
+}
+.build h4{
+    text-align: center;
+    padding-top: 80px;
+    font-size: 23px;
+    font-weight: 700;
+    transition: all ease 0.5s ;
+    text-transform: uppercase;
+
+}
+.overlay1{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+
+    padding: 20px;
+    padding-top: 60px;
+    opacity: 0;
+    transition: all ease 0.4s;
+}
+
+.overlay1 h4{
+    color: black;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.overlay1 p{
+    color: black;
+    font-size: 20px;
+}
+.build:hover .overlay1{
+    opacity: 2;
+}
+.build:hover{
+    scale: 1.07;
+    transition: all ease 0.6s;
+}
+#trainer1{
+    background-image: url(https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/w_300,c_limit/4a9e671a-091f-40e0-aca9-8e9a1419c561/nike-training-club-app-home-workouts.jpg);
+    background-size: cover;
+}
+#trainer2{
+    background-image: url(https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_441,c_limit/d90cf55c-27ed-41d8-8a60-47543662acb0/nike-training-club-app-home-workouts.jpg);
+    background-size: cover;
+}
+#trainer3{
+    background-image: url(https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_441,c_limit/781f8c74-826c-4da5-89a1-2572b5ac2fa2/nike-training-club-app-home-workouts.jpg);
+    background-size: cover;
+}
+
+
+
+#footer {
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6.5vw;
+    padding: 0 100px;
+}
+#footer > img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+}
+
+#f1,#f2,#f3,#f4 {
+
+    width: fit-content;
+    position: relative;
+    z-index: 99;
+}
+#f2 h3 {
+    font-size: 1.6vw;
+    text-transform: uppercase;
+    
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+#f2 a{
+    text-decoration: none ;
+    color: #000;
+}
+#f3 i {
+    color: #000;
+    border: solid 2px;
+    padding: 5px;
+    margin-bottom: 6px;
+    border-color:#000;
+    border-radius: 20px;
+    scale: 1;
+}
+#f3 i:hover{
+    color: #95C11E;
+    border-color: #95C11E;
+    background-color: white;
+    scale: 1.3;
+    transition: all ease 0.5s;
+
+}
+#f4 h4 {
+    font-size: 1vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
